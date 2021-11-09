@@ -10,7 +10,7 @@ process SAMTOOLS {
     
     script:
     """
-    samtools view -bS ${sample_name}.sam -@ ${params.threads} | samtools sort -o ${sample_name}.sorted.bam -T tmp  -@ ${params.threads} 
+    samtools view -bS ${sam_file} -@ ${params.threads} | samtools sort -o ${sample_name}.sorted.bam -T tmp  -@ ${params.threads} 
     """
     
 }
